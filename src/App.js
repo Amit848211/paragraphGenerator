@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './component/Home';
+import { useState } from 'react';
+
 
 function App() {
+  const [arr,setarr]=useState(["Quantum computing stands at the forefront of technological advancement, promising to revolutionize computation by harnessing the principles of quantum mechanics.",
+  "At the heart of quantum computing are qubits, which leverage the principles of superposition and entanglement.",
+  "Despite being in its nascent stages, quantum computing has witnessed remarkable progress in recent years. ",
+  "However, quantum computing still faces significant challenges and limitations.",
+  "In conclusion, quantum computing represents a paradigm shift in computation, offering unprecedented computational power and unlocking new frontiers in science and technology. "])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Home myArray={arr}
+      setarr={setarr}
+     />
+    
   );
 }
 
